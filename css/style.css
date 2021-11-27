@@ -1,0 +1,361 @@
+@charset "utf-8";
+/* リセット */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    margin: 0;
+    padding: 0;
+}
+footer {
+    background: #e1e1e1;
+}
+main,
+section,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p,
+dl {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #0f0f0f;
+    font-family: "游ゴシック体", "游ゴシック", "Yu Gothic", "sans-serif",
+        "A1 Mincho", "游明朝", "Yu Mincho", "Hiragino Mincho ProN W3",
+        "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+        "ＭＳ 明朝", "serif";
+    font-feature-settings: "palt";
+}
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+/* トップページ */
+.header_container_wrap {
+    width: 100%;
+    position: absolute;
+}
+.header_container_wrap h1 {
+    position: absolute;
+    top: 370px;
+    left: 22%;
+    font-size: 38px;
+    font-weight: lighter;
+    line-height: 1.2;
+}
+.header_container_wrap h2 {
+    padding-left: 5%;
+    padding-top: 130px;
+    margin: 0 auto;
+    width: 35%;
+}
+.header_nav {
+    text-align: left;
+}
+.header_nav img {
+    margin: 62px 0 0 3.2%;
+    padding-bottom: 139px;
+    width: 4%;
+}
+.menu li {
+    width: 100px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 2.5%;
+    padding-bottom: 33px;
+    color: #b4b4b4;
+}
+/*自分について */
+.main {
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-top: 400px;
+}
+.main h2 {
+    padding-bottom: 55px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bolder;
+}
+.main p {
+    line-height: 1.5;
+    font-size: 20px;
+    text-align: center;
+}
+.button01 {
+    width: 140px;
+    font-size: 18px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    padding: 8px 0 8px;
+    color: #fff;
+    background: #67a39b;
+    border-radius: 5px;
+    margin-top: 90px;
+    margin-bottom: 120px;
+}
+.page_number {
+    font-weight: bolder;
+    font-size: 30px;
+}
+/* サービスについて */
+.SERVICE {
+    background: #e1e1e1;
+    margin: 0 auto;
+}
+.contents_service h2 {
+    margin-top: 30px;
+    padding-top: 50px;
+    font-size: 35px;
+}
+.contents_service p {
+    margin: 0 auto;
+    padding-bottom: 35px;
+    font-size: 20px;
+}
+.service_menu {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.service_menu img {
+    width: 40%;
+    padding-top: 55px;
+    padding-bottom: 100px;
+}
+.wrap {
+    width: 30%;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 0 30px 0 0;
+}
+.wrap img {
+    align-items: center;
+}
+.wrap h3 {
+    font-size: 25px;
+    color: #0f0f0f;
+}
+.triangle {
+    align-items: flex-end;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 40px 0 0 40px;
+    border-color: transparent transparent transparent #67a39b;
+}
+.arrow_up {
+    position: relative;
+    top: 40px;
+    width: 100%;
+    background-color: #67a39b;
+}
+.arrow_up::before {
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 13px;
+    height: 13px;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transform: rotate(-45deg);
+}
+.button02 {
+    width: 140px;
+    font-size: 18px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    padding: 8px 0 8px;
+    color: #fff;
+    background: #67a39b;
+    border-radius: 5px;
+    margin-top: 90px;
+}
+/* 実績 */
+.contents_work {
+    width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+.contents_work h2 {
+    padding-top: 160px;
+    padding-bottom: 5px;
+}
+.contents_work p {
+    margin: 0 auto;
+    font-size: 14px;
+}
+.contents_work img {
+    margin-top: 50px;
+}
+.derection_desing {
+    color: #fff;
+}
+.label {
+    text-align: right;
+}
+.label h3 {
+    display: inline-block;
+    transform-origin: top right;
+    transform: rotate(90deg) translateX(-100%);
+    margin-top: 117px;
+    margin-right: 6%;
+    padding: 20px 212px 80px 50px;
+    text-align: left;
+    background: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.label h4 {
+    font-weight: lighter;
+    position: absolute;
+    top: 550px;
+    right: 7%;
+}
+.button03 {
+    width: 100px;
+    font-size: 15px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    padding: 8px 0 8px;
+    color: #fff;
+    background: #67a39b;
+    border-radius: 5px;
+    margin-bottom: 270px;
+    position: absolute;
+    right: 7%;
+    top: 600px;
+}
+/* お問い合わせ */
+.container_contact {
+    margin: 0 auto;
+    width: 1000px;
+    background-size: cover;
+    position: relative;
+    background-color: #e1e1e1;
+    border-radius: 20px;
+}
+.container_contact h2 {
+    font-size: 250%;
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 0.2rem;
+}
+.btn {
+    display: block;
+    position: absolute;
+    left: 37%;
+    top: 140px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 12px 50px;
+    text-decoration: none;
+    background-color: #67a39b;
+    color: #fff;
+}
+.container_contact p {
+    line-height: 1.8;
+    letter-spacing: 0.2rem;
+    padding-top: 248px;
+    padding-bottom: 120px;
+    font-size: 18px;
+}
+.page_number p {
+    text-align: left;
+    font-weight: bolder;
+    font-size: 30px;
+    padding-left: 1.5%;
+}
+/* footer */
+.footer_container {
+    display: flex;
+    margin-top: 300px;
+}
+.side_menu {
+    width: 32%;
+    padding-top: 145px;
+}
+.footer_logo img {
+    width: 12%;
+    padding-left: 10%;
+}
+.sns {
+    width: 20%;
+    padding-left: 6.5%;
+    padding-top: 96px;
+}
+.follow_me {
+    display: flex;
+    justify-content: space-around;
+}
+.follow_me img {
+    width: 60%;
+    align-items: center;
+}
+.follow_me li {
+    display: flex;
+    justify-content: space-around;
+}
+.footer_nav {
+    margin-left: 5%;
+}
+.gr_menu {
+    width: 80%;
+    margin: 0 auto;
+    padding: 113px 10px 90px;
+    display: flex;
+    justify-content: space-around;
+}
+.gr_menu li {
+    font-weight: bold;
+}
+.footer_nav h2 {
+    font-size: 45px;
+    font-weight: lighter;
+    text-align: center;
+    padding-bottom: 14px;
+}
+.footer_nav h3 {
+    text-align: center;
+    font-weight: lighter;
+    letter-spacing: 0.2rem;
+}
+.footer_nav p {
+    padding-top: 130px;
+    padding-bottom: 60px;
+    text-align: center;
+}

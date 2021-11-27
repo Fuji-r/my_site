@@ -1,0 +1,210 @@
+@charset "utf-8";
+/* リセット */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    margin: 0;
+    padding: 0;
+}
+footer {
+    background: #e1e1e1;
+}
+main,
+section,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p,
+dl {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #0f0f0f;
+    font-family: "游ゴシック体", "游ゴシック", "Yu Gothic", "sans-serif",
+        "A1 Mincho", "游明朝", "Yu Mincho", "Hiragino Mincho ProN W3",
+        "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+        "ＭＳ 明朝", "serif";
+    font-feature-settings: "palt";
+}
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+.header_container_wrap img {
+    position: relative;
+    width: 100%;
+}
+.header_nav {
+    text-align: left;
+    position: absolute;
+    top: 150px;
+    left: 5%;
+}
+.header_nav img {
+    width: 40%;
+    margin-bottom: 155px;
+}
+.menu li {
+    width: 40%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 33px;
+    color: #0f0f0f;
+}
+/* メイン_main */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.container h2 {
+    font-size: 35px;
+    margin-top: 144px;
+}
+.container h3 {
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: lighter;
+}
+.container p {
+    padding-top: 162px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.5;
+    letter-spacing: 0.2rem;
+}
+/* スローガン */
+.slogan {
+    text-align: center;
+    padding-top: 191px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.slogan h1 {
+    font-size: 45px;
+}
+.slogan h2 {
+    font-size: 18px;
+    padding-top: 23px;
+    font-weight: lighter;
+}
+.slogan p {
+    padding-top: 141px;
+    line-height: 1.5;
+    letter-spacing: 0.2rem;
+    margin: 0 auto;
+    text-align: left;
+}
+.logo_detail {
+    width: 52%;
+    margin: 0 auto;
+    text-align: center;
+}
+.logo_detail img {
+    width: 50%;
+    padding-top: 248px;
+    padding-left: 13%;
+}
+.logo_detail h2 {
+    padding-top: 176px;
+    font-size: 35px;
+}
+.concept {
+    padding-top: 57px;
+}
+.concept li {
+    padding-bottom: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+}
+.logo_detail p {
+    padding-top: 141px;
+    padding-bottom: 121px;
+    font-size: 18px;
+}
+/* footer */
+.footer_container {
+    display: flex;
+}
+.side_menu {
+    width: 32%;
+    padding-top: 145px;
+}
+.footer_logo img {
+    width: 12%;
+    padding-left: 10%;
+}
+.sns {
+    width: 20%;
+    padding-left: 6.5%;
+    padding-top: 96px;
+}
+.follow_me {
+    display: flex;
+    justify-content: space-around;
+}
+.follow_me img {
+    width: 60%;
+    align-items: center;
+}
+.follow_me li {
+    display: flex;
+    justify-content: space-around;
+}
+.footer_nav {
+    margin-left: 5%;
+}
+.gr_menu {
+    width: 80%;
+    margin: 0 auto;
+    padding: 113px 10px 4%;
+    display: flex;
+    justify-content: space-around;
+}
+.gr_menu li {
+    font-weight: bold;
+}
+.footer_nav h2 {
+    font-size: 45px;
+    font-weight: lighter;
+    text-align: center;
+    padding-bottom: 14px;
+}
+.footer_nav h3 {
+    text-align: center;
+    font-weight: lighter;
+    letter-spacing: 0.2rem;
+}
+.footer_nav p {
+    padding-top: 130px;
+    padding-bottom: 60px;
+    text-align: center;
+}
