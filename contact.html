@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="css/contact.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <title>ポートフォリオ</title>
     <meta name="discription" content="デザイナーのイチモクのポートフォリオサイト">
 
@@ -16,10 +19,9 @@
                 <div class="header_contact">
                     <h1>CONTACT</h1>
                     <h2>お問い合わせ</h2>
-                    <p>お問い合わせやご依頼はお気軽に下記メールアドレスまでご連絡ください。<br>
-                        ご依頼の方は「ご依頼方法」をご確認ください。</p>
+                    <p>お問い合わせやご依頼はお気軽に下記メールアドレスまでご連絡ください。<br>ご依頼の方は「ご依頼方法」をご確認ください。</p>
                     <div class="mail_address">
-                        <img src="img/icon/mail_icon@2x.png" alt="メールのアイコン">
+                        <img src="img/icon/mail_icon@2x.png" alt="main_logo">
                         <h3><a href="mailto:f.tyle0101@gmail.com">f.style0101@gmail.com</a></h3>
                     </div>
                     <div class="message">
@@ -32,14 +34,24 @@
                 </div>
             </div>
         <div class="header_nav">
-            <img src="img/LOGO/logo_bk@2x.png" alt="ロゴマーク">
+            <h2><a href="index.html">ICHIMOKU</a></h2>
+            <a href="index.html"><img src="img/LOGO/logo_bk@2x.png" alt="ロゴマーク"></a>
             <ul class= "menu">
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="#">SERVICE</a></li>
                 <li><a href="work.html">WORK</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
-        </div>
+            </div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="#Menu">SERVICE</a></li>
+                    <li><a href="work.html">WORK</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="sp_menu_btn"><span></span></div>
     </header>
     <section class="main">
         <div class="how_to">
@@ -69,9 +81,9 @@
                     </div>
                     <div class="sns">
                         <ul class="follow_me">
-                            <li><a href="https://twitter.com"><img src="img/SNS/2x/Twitter@2x.png"></a></li>
-                            <li><a href="https://www.instagram.com/r.y.o_fuji"><img src="img/SNS/2x/insta@2x.png"></a></li>
-                            <li><a href="https://facebook.com"><img src="img/SNS/2x/facebook@2x.png"></a></li>
+                            <li><a href="https://twitter.com/RyoFuji2"><img src="img/SNS/2x/Twitter@2x.png"></a></li>
+                            <li><a href="https://www.instagram.com/r.y.o_fuji/"><img src="img/SNS/2x/insta@2x.png"></a></li>
+                            <li><a href="https://www.facebook.com/fuji.ryo.1"><img src="img/SNS/2x/facebook@2x.png"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -84,9 +96,39 @@
                     </ul>
                     <h2>いいものは、いつもシンプル</h2>
                     <h3>Good things are always simple.</h3>
+                    <div class="sns_sp">
+                        <ul class="follow_me_sp">
+                            <li><a href="https://twitter.com/RyoFuji2"><img src="img/SNS/2x/Twitter@2x.png"></a></li>
+                            <li><a href="https://www.instagram.com/r.y.o_fuji/"><img src="img/SNS/2x/insta@2x.png"></a></li>
+                            <li><a href="https://www.facebook.com/fuji.ryo.1"><img src="img/SNS/2x/facebook@2x.png"></a></li>
+                        </ul>
+                    </div>
                     <p>&copy;  2021  ICHIMOKU</p>
                     </div>
             </div>
         </footer>
+        <script>
+            $(function() {
+            // headerのメニューの被せ方
+            $(".sp_menu_btn,.sp_nav li a").click(function (){
+                $(".sp_menu_btn").toggleClass('open');
+                $(".sp_nav").fadeToggle();
+            });
+            // スライドの流し方
+            $('.slider1').slick({
+            autoplaySpeed: 2000,
+            autoplay: true,
+            dots: true
+            });
+            $('a[href^="#"]').click(function(){
+            let speed = 1000;
+            let href= $(this).attr("href");
+            let target = $(href == "#" || href == "" ? 'html' : href);
+            let position = target.offset().top;
+            $("html, body").animate({scrollTop:position}, speed, "swing");
+            return false;
+            })
+        });
+        </script>
 </body>
 </html>

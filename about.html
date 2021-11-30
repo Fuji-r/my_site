@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/about.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <title>ポートフォリオ</title>
     <meta name="discription" content="デザイナーのイチモクのポートフォリオサイト">
 </head>
@@ -15,6 +17,7 @@
                 <p><img src="img/top/AdobeStock_456224400_02.png" alt="トップイメージ"></p>
             </div>
             <div class="header_nav">
+                <h2><a href="index.html">ICHIMOKU</a></h2>
                 <a href="index.html"><img src="img/logo/logo_bk@2x.png" alt="main_logo"></a>
                 <ul class= "menu">
                     <li><a href="about.html">ABOUT</a></li>
@@ -23,6 +26,15 @@
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="#Menu">SERVICE</a></li>
+                    <li><a href="work.html">WORK</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="sp_menu_btn"><span></span></div>
         </div>
     </header>
     <section class="main">
@@ -35,11 +47,10 @@
                 プロモーションの発信としてwebサイトのデザインやグラフィックなどのビジュアルデザインもしております。</p>
             </div>
         <div class="slogan">
-            <h1>いいものは、いつもシンプル。</h1>
+            <h1>いいものは、<br>いつもシンプル。</h1>
             <h2>Good things are always simple.</h2>
             <p>ただのイベントプロデュースや装飾がキレイなブースデザインがお客様の求める結果に結びつくとは限りません。<br>まずは、事前にお客様の情報や業界のことをしっかりと把握・分析をした結果、プロモーションとして何が必要なのか、<br>また、お客様の問題や課題の解決のために何が足りないのかを丁寧にヒアリングしてご提案させていただきます。</p>
         </div>
-    </div>
     </section>
     <section class="logo_detail">
         <img src="img/logo/logo_detail@2x.png" alt="main_logo">
@@ -56,13 +67,13 @@
         <div class="footer_container">
             <div class="side_menu">
                 <div class="footer_logo">
-                    <img src="img/logo/logo_bk@2x.png" alt="ロゴマーク">
+                    <a href="index.html"><img src="img/logo/logo_bk@2x.png" alt="ロゴマーク"></a>
                 </div>
                 <div class="sns">
                     <ul class="follow_me">
-                        <li><a href="https://twitter.com"><img src="img/SNS/2x/Twitter@2x.png"></a></li>
-                        <li><a href="https://instagram.com"><img src="img/SNS/2x/insta@2x.png"></a></li>
-                        <li><a href="https://facebook.com"><img src="img/SNS/2x/facebook@2x.png"></a></li>
+                        <li><a href="https://twitter.com/RyoFuji2"><img src="img/SNS/2x/Twitter@2x.png"></a></li>
+                            <li><a href="https://www.instagram.com/r.y.o_fuji/"><img src="img/SNS/2x/insta@2x.png"></a></li>
+                            <li><a href="https://www.facebook.com/fuji.ryo.1"><img src="img/SNS/2x/facebook@2x.png"></a></li>
                     </ul>
                 </div>
             </div>
@@ -75,10 +86,40 @@
                 </ul>
                 <h2>いいものは、いつもシンプル</h2>
                 <h3>Good things are always simple.</h3>
+                <div class="sns_sp">
+                    <ul class="follow_me_sp">
+                        <li><a href="https://twitter.com/RyoFuji2"><img src="img/SNS/2x/Twitter@2x.png"></a></li>
+                            <li><a href="https://www.instagram.com/r.y.o_fuji/"><img src="img/SNS/2x/insta@2x.png"></a></li>
+                            <li><a href="https://www.facebook.com/fuji.ryo.1"><img src="img/SNS/2x/facebook@2x.png"></a></li>
+                    </ul>
+                </div>
                 <p>&copy;  2021  ICHIMOKU</p>
                 </div>
         </div>
     </footer>
+    <script>
+        $(function() {
+        // headerのメニューの被せ方 //
+        $(".sp_menu_btn,.sp_nav li a").click(function (){
+            $(".sp_menu_btn").toggleClass('open');
+            $(".sp_nav").fadeToggle();
+        });
+        // スライドの流し方
+        $('.slider1').slick({
+        autoplaySpeed: 2000,
+        autoplay: true,
+        dots: true
+        });
+        $('a[href^="#"]').click(function(){
+        let speed = 1000;
+        let href= $(this).attr("href");
+        let target = $(href == "#" || href == "" ? 'html' : href);
+        let position = target.offset().top;
+        $("html, body").animate({scrollTop:position}, speed, "swing");
+        return false;
+        })
+    });
+    </script>
 </body>
 
 </html>
