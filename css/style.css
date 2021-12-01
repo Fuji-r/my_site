@@ -67,9 +67,9 @@ img {
 }
 .header_container_wrap h1 {
     position: absolute;
-    top: 500px;
+    top: 35%;
     right: 10%;
-    font-size: 3.8rem;
+    font-size: 4.5rem;
     font-weight: lighter;
     line-height: 1.2;
     color: #fff;
@@ -137,8 +137,8 @@ img {
     font-size: 3rem;
 }
 /* サービスについて */
-.SERVICE {
-    width: 100%;
+.contents_service {
+    margin: 0 auto;
     text-align: center;
     background: #e1e1e1;
 }
