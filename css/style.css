@@ -60,7 +60,6 @@ img {
 }
 /* トップページ */
 .header_container_wrap {
-    max-width: 1920px;
     position: relative;
 }
 .header_container_wrap br {

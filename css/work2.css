@@ -60,7 +60,6 @@ img {
 }
 /* トップページ */
 .top_page {
-    max-width: 92%;
     margin: 0 auto;
     padding: 185px 0 150px 65%;
     background: #b4b4b4;
