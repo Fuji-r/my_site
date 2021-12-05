@@ -123,7 +123,7 @@ img {
     padding-bottom: 10px;
 }
 .main_photo {
-    max-width: 77%;
+    max-width: 65%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -135,7 +135,7 @@ img {
 }
 /* コンセプトについて */
 .concept {
-    max-width: 75%;
+    max-width: 65%;
     width: 90%;
     margin: 0 auto;
     text-align: left;
@@ -229,13 +229,18 @@ img {
 /* レスポンシブ_767 */
 @media screen and (max-width: 767px) {
     /* トップページ */
+    .header_container {
+        margin-right: 100px;
+    }
+    .header_nav {
+        z-index: 11;
+    }
     .header_nav h2 {
         position: fixed;
         display: flex;
-        top: 7%;
-        left: 5%;
+        top: 35px;
+        left: 30px;
         letter-spacing: 0.15rem;
-        z-index: 1;
     }
     .header_nav img {
         display: none;
@@ -251,7 +256,7 @@ img {
         right: 30px;
         height: 30px;
         cursor: pointer;
-        z-index: 2;
+        z-index: 25;
     }
     .sp_menu_btn span {
         background: #0f0f0f;
@@ -296,7 +301,7 @@ img {
         height: 100vh;
         background: rgba(000, 000, 000, 0.8);
         width: 100%;
-        z-index: 1;
+        z-index: 20;
     }
     .sp_nav ul {
         display: flex;
@@ -368,6 +373,18 @@ img {
 @media screen and (max-width: 375px) {
     .top_page {
         background: #fff;
+        padding-bottom: 0px;
+    }
+    .header_nav {
+        top: 0;
+        background: #fff;
+        padding: 20px 0 70px;
+        box-sizing: border-box;
+        width: 100%;
+        position: fixed;
+    }
+    .header_nav h2 {
+        top: 40px;
     }
     .header_container {
         display: none;
@@ -375,13 +392,13 @@ img {
     .category h2 {
         font-size: 3rem;
         padding-bottom: 4px;
-        margin-top: 220px;
+        margin-top: 0;
     }
     .category p {
         font-size: 1.4rem;
     }
     .concept h2 {
-        font-size: 2.7rem;
+        font-size: 2.4rem;
         padding-bottom: 15px;
         margin-top: 0;
     }

@@ -30,10 +30,10 @@ dl {
     padding: 0;
     line-height: 1;
     color: #0f0f0f;
-    font-family: "游ゴシック体", "游ゴシック", "Yu Gothic", "sans-serif",
-        "A1 Mincho", "游明朝", "Yu Mincho", "Hiragino Mincho ProN W3",
-        "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
-        "ＭＳ 明朝", "serif";
+    font-family: "Weltron Urban", "游ゴシック体", "游ゴシック", "Yu Gothic",
+        "sans-serif", "A1 Mincho", "游明朝", "Yu Mincho",
+        "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3",
+        "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", "serif";
     font-feature-settings: "palt";
 }
 a {
@@ -104,7 +104,7 @@ img {
 }
 /*自分について */
 .main {
-    max-width: 1920px;
+    max-width: 100%;
     margin: 0 auto;
 }
 .ABOUT h2 {
@@ -113,6 +113,9 @@ img {
     text-align: center;
     font-size: 3.5rem;
     font-weight: bolder;
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-iteration-count: 5;
 }
 .ABOUT p {
     line-height: 1.5;
@@ -210,6 +213,50 @@ img {
     border-top: 3px solid #fff;
     border-right: 3px solid #fff;
     transform: rotate(-45deg);
+}
+.open {
+    cursor: pointer; /* マウスオーバーでカーソルの形状を変えることで、クリックできる要素だとわかりやすいように */
+}
+#pop-up {
+    display: none; /* label でコントロールするので input は非表示に */
+}
+.overlay {
+    display: none; /* input にチェックが入るまでは非表示に */
+}
+#pop-up:checked + .overlay {
+    display: block;
+    z-index: 9999;
+    background-color: #00000070;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+.window {
+    width: 90vw;
+    max-width: 380px;
+    height: 240px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.text {
+    font-size: 18px;
+    margin: 0;
+}
+.close {
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 20px;
 }
 /* .button02 {
     width: 140px;
@@ -546,8 +593,8 @@ img {
     .header_nav h2 {
         position: fixed;
         display: flex;
-        top: 3%;
-        left: 5%;
+        top: 40px;
+        left: 30px;
         letter-spacing: 0.15rem;
         z-index: 1;
         color: #b4b4b4;
@@ -566,7 +613,7 @@ img {
     .sp_menu_btn {
         display: block;
         position: fixed;
-        top: 20px;
+        top: 35px;
         right: 30px;
         height: 30px;
         cursor: pointer;
@@ -750,9 +797,17 @@ img {
     .header_container_wrap h1 {
         display: none;
     }
+    .top_page {
+        background: #fff;
+        z-index: 50;
+    }
+    .header_nav {
+        width: 100%;
+        z-index: 5;
+        background: #fff;
+    }
     .header_nav h2 {
-        top: 4%;
-        left: 5%;
+        top: 40px;
     }
     /* ABOUについて */
     .ABOUT h2 {

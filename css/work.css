@@ -93,7 +93,7 @@ img {
     font-size: 1.5rem;
 }
 .header_nav {
-    position: fixed;
+    position: absolute;
     top: 62px;
     left: 0;
     text-align: center;
@@ -125,6 +125,7 @@ img {
 }
 .work_wrap p {
     padding-bottom: 85px;
+    font-size: 2rem;
 }
 /* 実績写真 */
 .main {
@@ -246,11 +247,17 @@ img {
 /* レスポンシブ_767px */
 @media screen and (max-width: 767px) {
     /* トップページ */
+    .header_container {
+        margin-right: 100px;
+    }
+    .header_nav {
+        z-index: 11;
+    }
     .header_nav h2 {
         position: fixed;
         display: flex;
-        top: 4%;
-        left: 5%;
+        top: 35px;
+        left: 30px;
         letter-spacing: 0.15rem;
     }
     .header_nav img {
@@ -267,6 +274,7 @@ img {
         right: 30px;
         height: 30px;
         cursor: pointer;
+        z-index: 100;
     }
     .sp_menu_btn span {
         background: #0f0f0f;
@@ -311,6 +319,7 @@ img {
         height: 100vh;
         background: rgba(000, 000, 000, 0.8);
         width: 100%;
+        z-index: 99;
     }
     .sp_nav ul {
         display: flex;
@@ -325,10 +334,14 @@ img {
         padding: 20px 0;
     }
     /* main_実績写真 */
+    .photo_area {
+        z-index: 1;
+    }
     .photo {
         position: relative;
         width: 80%;
         margin: 45px 1%;
+        z-index: 10;
     }
     .photo_detail p {
         font-size: 1.4rem;
@@ -393,18 +406,24 @@ img {
 @media screen and (max-width: 375px) {
     .top_page {
         background: #fff;
+        padding-bottom: 0px;
     }
     .header_nav {
+        top: 0;
+        background: #fff;
+        padding: 20px 0 70px;
+        box-sizing: border-box;
         width: 100%;
-    }
-    .header_nav {
-        z-index: 5;
-    }
-    .sp_menu_btn {
-        z-index: 5;
+        position: fixed;
     }
     .header_nav h2 {
-        top: 7%;
+        top: 40px;
+    }
+    .sp_menu_btn {
+        z-index: 30;
+    }
+    .work_wrap h2 {
+        padding-top: 0;
     }
     .header_nav img {
         display: flex;
@@ -423,7 +442,7 @@ img {
         padding-bottom: 65px;
     }
     .photo img {
-        z-index: 50;
+        z-index: 10;
     }
     .photo {
         position: relative;

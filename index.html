@@ -64,7 +64,14 @@
                         <img src="img/icon/2x/icon_derection@2x.png" alt="ディレクションアイコン">
                         <h4>DERECTION</h4>
                         <div class="triangle"></div>
-                        <a href="work2.html"><p class="arrow_up"></p></a>
+                        <label class="opne" for="pop-up"><p class="arrow_up"></p></label>
+                        <input type="checkbox" id="pop-up">
+                        <div class="overlay">
+                            <div class="window">
+                                <label class="close" for="pop-up">×</label>
+                                <p class="text">ディレクションについて</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="wrap">
                         <img src="img/icon/2x/icon_design@2x.png" alt="ディレクションアイコン">
@@ -170,20 +177,6 @@
             $(".sp_menu_btn").toggleClass('open');
             $(".sp_nav").fadeToggle();
         });
-        // スライドの流し方
-        $('.slider1').slick({
-        autoplaySpeed: 2000,
-        autoplay: true,
-        dots: true
-        });
-        $('a[href^="#"]').click(function(){
-        let speed = 1000;
-        let href= $(this).attr("href");
-        let target = $(href == "#" || href == "" ? 'html' : href);
-        let position = target.offset().top;
-        $("html, body").animate({scrollTop:position}, speed, "swing");
-        return false;
-        })
     });
     </script>
 </body>

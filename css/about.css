@@ -227,13 +227,20 @@ img {
 /* レスポンシブ_767px */
 @media screen and (max-width: 767px) {
     /* トップページ */
+    .header_nav {
+        background: #fff;
+        position: fixed;
+        top: 0;
+        padding-top: 90px;
+        box-sizing: border-box;
+        z-index: 10;
+    }
     .header_nav h2 {
         position: fixed;
         display: flex;
-        top: 4%;
-        left: 5%;
+        top: 25px;
+        left: 30px;
         letter-spacing: 0.15rem;
-        z-index: 1;
     }
     .header_nav img {
         display: none;
@@ -245,7 +252,7 @@ img {
     .sp_menu_btn {
         display: block;
         position: fixed;
-        top: 35px;
+        top: 25px;
         right: 30px;
         height: 30px;
         cursor: pointer;
@@ -313,15 +320,18 @@ img {
     .slogan h1 {
         display: block;
     }
+    .container p br {
+        display: none;
+    }
     .container p {
-        width: 70%;
+        width: 65%;
         text-align: justify;
     }
     .slogan br {
         display: none;
     }
     .slogan p {
-        width: 70%;
+        width: 65%;
     }
     /* footer_フッター */
     .footer_container {
@@ -373,11 +383,21 @@ img {
     .header_container_wrap img {
         display: none;
     }
+    .top_page {
+        background: #fff;
+    }
+    .header_nav {
+        width: 100%;
+        z-index: 5;
+    }
     .header_nav h2 {
-        top: 6%;
+        top: 40px;
+    }
+    .sp_menu_btn {
+        z-index: 999;
     }
     .main {
-        margin-top: 600px;
+        margin-top: 300px;
     }
     .container h2 {
         font-size: 3rem;
@@ -385,6 +405,9 @@ img {
     .container h3 {
         font-size: 1.4rem;
         padding-top: 3px;
+    }
+    .container p br {
+        display: none;
     }
     .container p {
         line-height: 1.7;

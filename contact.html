@@ -64,13 +64,13 @@
     <section class="check_list">
         <h2>ご依頼いただく際の主な確認事項</h2>
         <div class="last_check">
-            <ul class="list">
+            <ol class="list">
                 <li>ご依頼内容(イベントデザイン・webデザイン(新規/リニューアル)・グラフィックデザインなど)</li>
                 <li>おおよそのご予算</li>
                 <li>スケジュール(ご希望の提出日)</li>
                 <li>ご希望のデザイン(参考にしたいブースやwebサイトなど)</li>
                 <li>制作についてのご不安な点や現在お困りの点</li>
-            </ul>
+            </ol>
         </div>
     </section>
         <footer>
@@ -114,20 +114,6 @@
                 $(".sp_menu_btn").toggleClass('open');
                 $(".sp_nav").fadeToggle();
             });
-            // スライドの流し方
-            $('.slider1').slick({
-            autoplaySpeed: 2000,
-            autoplay: true,
-            dots: true
-            });
-            $('a[href^="#"]').click(function(){
-            let speed = 1000;
-            let href= $(this).attr("href");
-            let target = $(href == "#" || href == "" ? 'html' : href);
-            let position = target.offset().top;
-            $("html, body").animate({scrollTop:position}, speed, "swing");
-            return false;
-            })
         });
         </script>
 </body>

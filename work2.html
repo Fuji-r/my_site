@@ -34,7 +34,7 @@
             <a href="index.html"><img src="img/LOGO/logo_bk@2x.png" alt="ロゴマーク"></a>
             <ul class= "menu">
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="#">SERVICE</a></li>
+                <li><a href="index.html">SERVICE</a></li>
                 <li><a href="work.html">WORK</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
@@ -42,7 +42,7 @@
             <nav class="sp_nav">
                 <ul>
                     <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="#Menu">SERVICE</a></li>
+                    <li><a href="index.html">SERVICE</a></li>
                     <li><a href="work.html">WORK</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
@@ -52,7 +52,7 @@
     <section class="main">
         <div class="work_wrap">
             <div class="category">
-                <h2>WORK</h2>
+                <h2><a href="work.html">WORK</a></h2>
                 <p>制作実績</p>
             </div>
             <div class="main_photo">
@@ -89,7 +89,7 @@
                 <div class="footer_nav">
                     <ul class="gr_menu">
                         <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="#">SERVICE</a></li>
+                        <li><a href="index.html">SERVICE</a></li>
                         <li><a href="work.html">WORK</a></li>
                         <li><a href="contact.html">CONTACT</a></li>
                     </ul>
@@ -113,20 +113,6 @@
                 $(".sp_menu_btn").toggleClass('open');
                 $(".sp_nav").fadeToggle();
             });
-            // スライドの流し方
-            $('.slider1').slick({
-            autoplaySpeed: 2000,
-            autoplay: true,
-            dots: true
-            });
-            $('a[href^="#"]').click(function(){
-            let speed = 1000;
-            let href= $(this).attr("href");
-            let target = $(href == "#" || href == "" ? 'html' : href);
-            let position = target.offset().top;
-            $("html, body").animate({scrollTop:position}, speed, "swing");
-            return false;
-            })
         });
         </script>
 </body>
